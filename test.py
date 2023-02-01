@@ -62,8 +62,8 @@ def quality():
     print(single_pred)
 
     return render_template('/index.html', quality=single_pred[0])
-    # return "this is the coffee quality you are getting from python route: {}".format(single_pred[0])
+    # return "{}".format(single_pred[0])
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=False, host='0.0.0.0')
