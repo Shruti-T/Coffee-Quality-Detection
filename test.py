@@ -6,8 +6,9 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
 from sklearn import metrics
-from flask import Flask, request
+from flask import *
 import json
+from jinja2 import Environment, BaseLoader
 
 app = Flask(__name__)
 # http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83}
@@ -60,7 +61,8 @@ def quality():
     single_pred = model.predict(A)
     print(single_pred)
 
-    return "this is the coffee quality you are getting from python route: {}".format(single_pred[0])
+    return render_template('/index.html', quality=single_pred[0])
+    # return "this is the coffee quality you are getting from python route: {}".format(single_pred[0])
 
 
 if __name__ == '__main__':
