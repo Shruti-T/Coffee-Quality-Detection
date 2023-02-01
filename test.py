@@ -9,6 +9,9 @@ from sklearn import metrics
 from flask import *
 import json
 from jinja2 import Environment, BaseLoader
+import os
+
+port = int(os.environ.get('PORT', 5000))
 
 app = Flask(__name__)
 # http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83}
