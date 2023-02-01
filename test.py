@@ -11,7 +11,7 @@ import json
 from jinja2 import Environment, BaseLoader
 import os
 
-port = int(os.environ.get('PORT', 5000))
+portnumber = int(os.environ.get('PORT', 5000))
 
 app = Flask(__name__)
 # http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83}
@@ -69,4 +69,4 @@ def quality():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0', port=portnumber)
