@@ -61,8 +61,8 @@ def quality():
     single_pred = model.predict(A)
     print(single_pred)
 
-    return render_template('/index.html', quality=single_pred[0])
-    # return "{}".format(single_pred[0])
+    # return render_template('/index.html', quality=single_pred[0])
+    return "{}".format(single_pred[0])
 
 
 if __name__ == '__main__':
