@@ -14,8 +14,6 @@ import os
 portnumber = int(os.environ.get('PORT', 5000))
 
 app = Flask(__name__)
-# http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83}
-# http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83,"Acidity":8.75,"Body":8.5,"Balance":8.42,"Uniformity":10.0,"Clean.Cup":10.0,"Sweetness":10.0,"Cupper.Points":8.75,"Moisture":0.12,"Quakers":0.0,"Category.One.Defects":0.0,"Category.Two.Defects":0,"altitude_mean_meters":2075.0}
 
 
 @app.route('/')
@@ -70,3 +68,7 @@ def quality():
 if __name__ == '__main__':
 
     app.run(debug=False, host='0.0.0.0', port=portnumber)
+
+
+# http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83}
+# http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83,"Acidity":8.75,"Body":8.5,"Balance":8.42,"Uniformity":10.0,"Clean.Cup":10.0,"Sweetness":10.0,"Cupper.Points":8.75,"Moisture":0.12,"Quakers":0.0,"Category.One.Defects":0.0,"Category.Two.Defects":0,"altitude_mean_meters":2075.0}
