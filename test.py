@@ -60,7 +60,6 @@ def quality():
                  a["Cupper.Points"], a["Moisture"], a["Quakers"], a["Category.One.Defects"], a["Category.Two.Defects"], a["altitude_mean_meters"]]])
     single_pred = model.predict(A)
     print(single_pred)
-
     # return render_template('/index.html', quality=single_pred[0])
     return "{}".format(single_pred[0])
 
