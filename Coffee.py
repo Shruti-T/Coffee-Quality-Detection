@@ -62,7 +62,7 @@ def quality():
     print(single_pred)
     # return render_template('/index.html', quality=single_pred[0])
     output = {'quality': "{}".format(single_pred[0])}
-    return output
+    return jsonify(output)
 
 
 if __name__ == '__main__':
