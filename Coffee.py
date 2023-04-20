@@ -61,13 +61,14 @@ def quality():
     single_pred = model.predict(A)
     print(single_pred)
     # return render_template('/index.html', quality=single_pred[0])
-    return "{}".format(single_pred[0])
+    output = {'quality': "{}".format(single_pred[0])}
+    return jsonify(output)
 
 
 if __name__ == '__main__':
 
     app.run(debug=False, host='0.0.0.0', port=portnumber)
-
+# 127.0.0.1:5501
 
 # http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83}
 # http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83,"Aftertaste":8.6,"Acidity":8.75,"Body":8.5,"Balance":8.42,"Uniformity":10.0,"Clean.Cup":10.0,"Sweetness":10.0,"Cupper.Points":8.75,"Moisture":0.12,"Quakers":0.0,"Category.One.Defects":0.0,"Category.Two.Defects":0,"altitude_mean_meters":2075.0}
