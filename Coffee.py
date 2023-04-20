@@ -18,7 +18,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def quality():
-    request.json
     data = request.args.get('my_dict')
     stringdict = format(json.dumps(data))
     my_dataDict = json.loads(stringdict)
@@ -62,7 +61,7 @@ def quality():
     single_pred = model.predict(A)
     print(single_pred)
     # return render_template('/index.html', quality=single_pred[0])
-    # output = {'quality': "{}".format(single_pred[0])}
+    output = {'quality': "{}".format(single_pred[0])}
     return "{}".format(single_pred[0])
 
 
