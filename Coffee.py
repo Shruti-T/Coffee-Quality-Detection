@@ -24,8 +24,8 @@ def quality():
     myData = json.loads(my_dataDict)
 
     coffee = pd.read_csv("merged_data_cleaned_new.csv")
-    coffee_data = coffee[["Aroma", "Flavor", "Aftertaste", "Acidity", "Body", "Balance", "Uniformity", "Clean.Cup", "Sweetness", "Cupper.Points",
-                          "Moisture", "Quakers", "Category.One.Defects", "Category.Two.Defects", "altitude_mean_meters", "Total.Cup.Points"]]
+    coffee_data = coffee[["Aroma", "Flavor", "Aftertaste", "Acidity", "Body", "Balance", "Uniformity", "CleanCup", "Sweetness", "CupperPoints",
+                          "Moisture", "Quakers", "CategoryOneDefects", "CategoryTwoDefects", "altitude_mean_meters", "Total.Cup.Points"]]
 
     x = coffee_data["altitude_mean_meters"].mean()
     coffee_data_copy = coffee_data.copy()
@@ -46,18 +46,18 @@ def quality():
         "Body": float(myData['Body']),
         "Balance": float(myData['Balance']),
         "Uniformity": float(myData['Uniformity']),
-        "Clean.Cup": float(myData['Clean.Cup']),
+        "CleanCup": float(myData['CleanCup']),
         "Sweetness": float(myData['Sweetness']),
-        "Cupper.Points": float(myData['Cupper.Points']),
+        "CupperPoints": float(myData['CupperPoints']),
         "Moisture": float(myData['Moisture']),
         "Quakers": float(myData['Quakers']),
-        "Category.One.Defects": float(myData['Category.One.Defects']),
-        "Category.Two.Defects": float(myData['Category.Two.Defects']),
+        "CategoryOneDefects": float(myData['CategoryOneDefects']),
+        "CategoryTwoDefects": float(myData['CategoryTwoDefects']),
         "altitude_mean_meters": float(myData['altitude_mean_meters'])
     }
     # A = np.array([[a['Aroma'], 8.83, 8.75, 8.5, 8.42, 10.0, 10.0,10.0, 8.75, 0.12, 0.0, 0, 0, 2075.0]])
-    A = np.array([[a['Aroma'], a["Flavor"], a['Aftertaste'], a["Acidity"], a["Body"], a["Balance"], a["Uniformity"], a["Clean.Cup"], a["Sweetness"],
-                 a["Cupper.Points"], a["Moisture"], a["Quakers"], a["Category.One.Defects"], a["Category.Two.Defects"], a["altitude_mean_meters"]]])
+    A = np.array([[a['Aroma'], a["Flavor"], a['Aftertaste'], a["Acidity"], a["Body"], a["Balance"], a["Uniformity"], a["CleanCup"], a["Sweetness"],
+                 a["CupperPoints"], a["Moisture"], a["Quakers"], a["CategoryOneDefects"], a["CategoryTwoDefects"], a["altitude_mean_meters"]]])
     single_pred = model.predict(A)
     print(single_pred)
     # return render_template('/index.html', quality=single_pred[0])
