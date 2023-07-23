@@ -60,9 +60,9 @@ def quality():
                  a["CupperPoints"], a["Moisture"], a["Quakers"], a["CategoryOneDefects"], a["CategoryTwoDefects"], a["altitude_mean_meters"]]])
     single_pred = model.predict(A)
     print(single_pred)
-    return render_template('/index.html', quality=single_pred[0])
-    # output = {'quality': "{}".format(single_pred[0])}
-    # return jsonify(output)
+    # return render_template('/index.html', quality=single_pred[0])
+    output = {'quality': "{}".format(single_pred[0])}
+    return jsonify(output)
 
 
 if __name__ == '__main__':
