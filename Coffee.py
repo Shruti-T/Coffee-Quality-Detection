@@ -71,4 +71,4 @@ if __name__ == '__main__':
 # 127.0.0.1:5501
 
 # http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83}
-# http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83,"Aftertaste":8.6,"Acidity":8.75,"Body":8.5,"Balance":8.42,"Uniformity":10.0,"Clean.Cup":10.0,"Sweetness":10.0,"Cupper.Points":8.75,"Moisture":0.12,"Quakers":0.0,"Category.One.Defects":0.0,"Category.Two.Defects":0,"altitude_mean_meters":2075.0}
+# http://localhost:5000?my_dict={"aroma":8.67,"Flavor":8.83,"Aftertaste":8.6,"Acidity":8.75,"Body":8.5,"Balance":8.42,"Uniformity":10.0,"CleanCup":10.0,"Sweetness":10.0,"CupperPoints":8.75,"Moisture":0.12,"Quakers":0.0,"CategoryOneDefects":0.0,"CategoryTwoDefects":0,"altitude_mean_meters":2075.0}
