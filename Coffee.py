@@ -28,8 +28,8 @@ def quality():
                           "Moisture", "Quakers", "CategoryOneDefects", "CategoryTwoDefects", "altitude_mean_meters", "Total.Cup.Points"]]
 
     x = coffee_data["altitude_mean_meters"].mean()
-    coffee_data_copy = coffee_data.copy()
-    coffee_data_copy["altitude_mean_meters"].fillna(x, inplace=True)
+    # coffee_data_copy = coffee_data.copy()
+    # coffee_data_copy["altitude_mean_meters"].fillna(x, inplace=True)
     X = coffee_data.drop(columns='Total.Cup.Points', axis=1)
     Y = coffee_data['Total.Cup.Points']
     X_train, X_test, Y_train, Y_test = train_test_split(
